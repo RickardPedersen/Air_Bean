@@ -16,5 +16,13 @@ module.exports = {
             console.error(error)
         }
     },
+    async getUser(userId) {
+        try {
+            return await user.findById(userId)
+        } catch (error) {
+            console.error(error)
+        }
+    },
+    
 
 }

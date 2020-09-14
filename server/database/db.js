@@ -59,6 +59,24 @@ const userSchema = new mongoose.Schema({
   { timestamps: true }
 )
 
-const user = mongoose.model('user', userSchema)
+const productSchema = new mongoose.Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    desc: {
+        type: String,
+        required: true
+    },
+    price: {
+        type: Number,
+        required: true
+    }
+  },
+  { timestamps: true }
+)
 
-module.exports = {connect, disconnect, user}
+const user = mongoose.model('user', userSchema)
+const product = mongoose.model('product', productSchema);
+
+module.exports = {connect, disconnect, user, product}
