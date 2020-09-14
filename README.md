@@ -1,2 +1,2 @@
-# WebShop_Git_Flow
+# Air Bean
 School project
